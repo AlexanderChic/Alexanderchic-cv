@@ -1,0 +1,147 @@
+/* Variables de colores */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --dark-bg: #121212;
+    --dark-text: #f8f9fa;
+    --dark-card: #1c1c1c;
+}
+
+/* Estilos base */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease; /* Agregar transición para el navbar */
+}
+
+.navbar-scrolled {
+    background-color: #333 !important; /* Cambia el color al hacer scroll */
+}
+
+/* Tarjetas de proyectos */
+.card {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--secondary-color);
+    color: white;
+}
+
+/* 🔥 Modo Oscuro 🔥 */
+.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+    transition: background 0.3s, color 0.3s;
+}
+
+.dark-mode .navbar {
+    background-color: var(--dark-card);
+}
+
+.dark-mode .card {
+    background-color: var(--dark-card);
+    color: var(--dark-text);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .btn-primary {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.dark-mode .btn-primary:hover {
+    background-color: #138496;
+}
+
+#dark-mode-toggle {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#dark-mode-toggle:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Estilos para el carrusel */
+#carouselProyecto1 .carousel-item img {
+    object-fit: cover;
+    height: 240px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Estilos para la tarjeta de contacto */
+.card-contacto {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.card-contacto .card-img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.card-contacto .card-body {
+    width: 60%;
+    padding: 10px;
+}
+
+.card img.img-thumbnail {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card img.img-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+/* 🌍 Hacerlo responsive */
+@media (max-width: 768px) {
+    .card-contacto {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card-contacto .card-img {
+        width: 100%;
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    .card-contacto .card-body {
+        width: 100%;
+    }
+}
