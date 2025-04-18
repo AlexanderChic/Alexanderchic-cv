@@ -3,17 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio</title>
+    <meta name="description" content="Portfolio profesional de Francisco Alexander Chic Barrios, Programador Jr especializado en desarrollo web y aplicaciones">
+    <meta name="keywords" content="portfolio, programación, desarrollo web, .NET, JavaScript, Python">
+    <meta name="author" content="Francisco Alexander Chic Barrios">
+    <meta name="theme-color" content="#007bff">
+    <title>Portfolio | Alexander Chic</title>
+    <!-- Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts - Poppins -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- CSS personalizado -->
     <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Mi Portafolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fas fa-code me-2"></i>Alexander Chic
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -23,50 +37,92 @@
                     <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
                     <li class="nav-item"><a class="nav-link" href="#certificates">Certificados</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
-
                 </ul>
-                <button id="dark-mode-toggle" class="btn btn-primary ms-3">🌙/☀️ Cambiar Modo</button>
-                
+                <button id="dark-mode-toggle" class="btn ms-3" aria-label="Cambiar tema">
+                    <i class="fas fa-moon"></i><span class="ms-2 d-none d-md-inline">Tema</span>
+                </button>
             </div>
         </div>
     </nav>
 
-    <header class="text-center bg-primary text-white py-5">
-        <h1>Bienvenido a mi Portafolio</h1>
-        <p>Programador Jr</p>
+    <!-- Header/Hero Section -->
+    <header class="text-center text-white py-5 mt-5" style="background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold">Francisco Alexander Chic</h1>
+                    <p class="lead">Programador Jr • Desarrollador Web • Estudiante de Ingeniería</p>
+                    <div class="d-flex justify-content-center mt-4">
+                        <a href="#projects" class="btn btn-primary me-2">
+                            <i class="fas fa-eye me-2"></i>Ver Proyectos
+                        </a>
+                        <a href="assets/CV_AlexanderChic.pdf" class="btn btn-outline-light" download>
+                            <i class="fas fa-download me-2"></i>Descargar CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
+    <!-- About Section -->
     <section id="about" class="container py-5">
-        <h2 class="text-center">Sobre Mí</h2>
-        <p>¡Hola! Soy Alexander Chic.
-            Soy un apasionado de la tecnología y la programación, con habilidades tanto en 
-            el desarrollo backend como frontend. Actualmente, estudio Ingeniería en Sistemas
-            en la Universidad Mariano Gálvez de Guatemala, donde fortalezco mis conocimientos en desarrollo de software.
-            
-            Me encanta crear soluciones innovadoras, aprender nuevas tecnologías y trabajar 
-            en equipo. Disfruto enfrentar desafíos y encontrar la mejor manera de optimizar 
-            procesos. Además, Soy una persona proactiva y sociable, siempre dispuesto a colaborar y compartir conocimientos.
-        </p>
-    </section>
-    <div class="text-center">
-        <a href="assets/CV_AlexanderChic.pdf" class="btn btn-success mt-3" download>📥 Descargar CV</a>
-    </div>
-    
-
-    <section id="projects" class="container py-5">
-        <h2 class="text-center">Proyectos</h2>
         <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="section-heading">
+                    <i class="fas fa-user me-2"></i>Sobre Mí
+                </h2>
+                <hr class="divider">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 mb-3 mb-md-0">
+                                <img src="assets/img/yo.jpg" alt="Alexander Chic" class="img-fluid rounded-circle shadow">
+                            </div>
+                            <div class="col-md-8 text-md-start text-center">
+                                <p class="lead">¡Hola! Soy Alexander Chic, un apasionado de la tecnología y la programación con habilidades tanto en desarrollo backend como frontend.</p>
+                                <p>Actualmente estudio Ingeniería en Sistemas en la Universidad Mariano Gálvez de Guatemala, donde fortalezco mis conocimientos en desarrollo de software.</p>
+                                <p>Me encanta crear soluciones innovadoras, aprender nuevas tecnologías y trabajar en equipo. Disfruto enfrentar desafíos y encontrar la mejor manera de optimizar procesos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <a href="assets/CV_AlexanderChic.pdf" class="btn btn-success" download>
+                        <i class="fas fa-download me-2"></i>Descargar CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container py-5">
+        <h2 class="text-center section-heading">
+            <i class="fas fa-code-branch me-2"></i>Proyectos
+        </h2>
+        <hr class="divider">
+        <div class="row g-4">
             <!-- Proyecto Ahorcados -->
             <div class="col-md-4">
-                <div class="card">
-                    <img src="assets/img/proyectoAhorcados.png" class="card-img-top" alt="Proyecto 1">
+                <div class="card h-100 shadow project-card">
+                    <div class="position-relative">
+                        <img src="assets/img/proyectoAhorcados.png" class="card-img-top" alt="Proyecto Ahorcados" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://hangingfabc.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
                     <div class="card-body">
-                        <h5 class="card-title">Ahorcados</h5>
+                        <h5 class="card-title">
+                            <i class="fas fa-gamepad me-2"></i>Ahorcados
+                        </h5>
                         <p class="card-text">Un juego clásico de ahorcados desarrollado con:</p>
                         <ul>
-                            <li><strong>Tecnologías:</strong> HTML, CSS, JavaScript.</li>
-                            <li><strong>Herramientas:</strong> Visual Studio Code, Git.</li>
-                            <li><strong>Metodologías:</strong> Desarrollo ágil, pruebas manuales.</li>
+                            <li><strong>Tecnologías:</strong> HTML, CSS, JavaScript</li>
+                            <li><strong>Herramientas:</strong> Visual Studio Code, Git</li>
+                            <li><strong>Metodologías:</strong> Desarrollo ágil, pruebas manuales</li>
                         </ul>
                         <p class="card-text">
                             <strong>Desafío:</strong> Implementar la lógica de verificación de letras en la palabra oculta, asegurando sensibilidad a mayúsculas y evitando intentos repetidos.
@@ -74,365 +130,728 @@
                         <p class="card-text">
                             <strong>Solución:</strong> Uso de funciones en JavaScript para normalizar la entrada, verificar intentos previos y actualizar la interfaz.
                         </p>
-                        <a href="https://hangingfabc.netlify.app/" target="_blank" class="btn btn-primary">Ver Proyecto</a>
+                    </div>
+                    <div class="card-footer bg-transparent text-center">
+                        <a href="https://hangingfabc.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt me-2"></i>Ver Proyecto
+                        </a>
                     </div>
                 </div>
             </div>
-    
+
             <!-- Proyecto Blackjack -->
-            <div class="col-md-4">
-                <div class="card">
-                    <div id="carouselProyecto1" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="assets/img/proyecto blackjack 1.png" class="d-block w-100" alt="Proyecto 1 - Imagen 1">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/img/proyecto blackjack 2.png" class="d-block w-100" alt="Proyecto 1 - Imagen 2">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/img/proyecto blackjack 3.png" class="d-block w-100" alt="Proyecto 1 - Imagen 3">
+    <div class="col-md-4">
+        <div class="card h-100 shadow project-card">
+            <div id="carouselProyecto1" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/img/proyecto blackjack 1.png" class="d-block w-100" alt="Blackjack - Imagen 1" loading="lazy">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/proyecto blackjack 2.png" class="d-block w-100" alt="Blackjack - Imagen 2" loading="lazy">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/proyecto blackjack 3.png" class="d-block w-100" alt="Blackjack - Imagen 3" loading="lazy">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyecto1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProyecto1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">
+                    <i class="fas fa-dice me-2"></i>Blackjack
+                </h5>
+                <p class="card-text">
+                    Un juego clásico de Blackjack donde el jugador compite contra la computadora. El objetivo es sumar 21 puntos o acercarse lo más posible sin pasarse.
+                </p>
+                <div class="accordion accordion-flush" id="accordionBlackjack">
+                    <div class="accordion-item">
+                        <h6 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDesafios" aria-expanded="false" aria-controls="collapseDesafios">
+                                Desafíos
+                            </button>
+                        </h6>
+                        <div id="collapseDesafios" class="accordion-collapse collapse" data-bs-parent="#accordionBlackjack">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Implementar lógica para decisiones inteligentes de la computadora</li>
+                                    <li>Gestionar estados del juego eficientemente</li>
+                                    <li>Optimizar el código para mantenibilidad</li>
+                                    <li>Crear una interfaz intuitiva y atractiva</li>
+                                </ul>
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyecto1" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselProyecto1" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        </button>
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Blackjack</h5>
-                        <p class="card-text">
-                            Un juego clásico de Blackjack donde el jugador compite contra la computadora. El objetivo es sumar 21 puntos o acercarse lo más posible sin pasarse.
-                        </p>
-                        <p class="card-text">
-                            <strong>Desafíos:</strong>
-                            <ul>
-                                <li>
-                                    <strong>Lógica del juego:</strong> Implementar la lógica para que la computadora tome decisiones inteligentes (pedir o plantarse) basadas en las reglas del Blackjack.
-                                </li>
-                                <li>
-                                    <strong>Manejo de estados:</strong> Gestionar el estado del juego (cartas del jugador, cartas de la computadora, puntuaciones, etc.) de manera eficiente.
-                                </li>
-                                <li>
-                                    <strong>Optimización del código:</strong> Asegurarme de que el código fuera limpio, modular y fácil de mantener.
-                                </li>
-                                <li>
-                                    <strong>Interfaz de usuario:</strong> Crear una interfaz intuitiva y atractiva que mostrara las cartas, las puntuaciones y los mensajes de resultado.
-                                </li>
-                            </ul>
-                        </p>
-                        <p class="card-text">
-                            <strong>Soluciones:</strong>
-                            <ul>
-                                <li>
-                                    <strong>Lógica de la computadora:</strong> Implementé un algoritmo simple pero efectivo para que la computadora decida cuándo pedir una carta adicional o plantarse. 
-                                    La computadora se planta si su puntuación es 17 o superior, siguiendo las reglas tradicionales del Blackjack.
-                                </li>
-                                <li>
-                                    <strong>Manejo de estados:</strong> Usé variables y funciones para gestionar el estado del juego. Por ejemplo, creé funciones separadas para repartir cartas, calcular puntuaciones y determinar el ganador.
-                                </li>
-                                <li>
-                                    <strong>Optimización del código:</strong> Apliqué buenas prácticas de JavaScript, como el uso de funciones de flecha, desestructuración y métodos modernos para calcular las puntuaciones.
-                                </li>
-                                <li>
-                                    <strong>Interfaz de usuario:</strong> Usé HTML y CSS para crear una interfaz limpia y Bootstrap para asegurar que fuera responsiva. Además, agregué animaciones simples para mejorar la experiencia del usuario.
-                                </li>
-                            </ul>
-                        </p>
-                        <p class="card-text">
-                            <strong>Resultados:</strong>
-                            <ul>
-                                <li>El juego es funcional y cumple con las reglas tradicionales del Blackjack.</li>
-                                <li>El código es modular y fácil de mantener, lo que permite agregar nuevas funcionalidades en el futuro.</li>
-                                <li>La interfaz es intuitiva y funciona bien en dispositivos móviles y de escritorio.</li>
-                            </ul>
-                        </p>
-                        <a href="https://jazzy-cendol-8bcf7a.netlify.app/" target="_blank" class="btn btn-primary">Ver Proyecto</a>
+                    <div class="accordion-item">
+                        <h6 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSoluciones" aria-expanded="false" aria-controls="collapseSoluciones">
+                                Soluciones
+                            </button>
+                        </h6>
+                        <div id="collapseSoluciones" class="accordion-collapse collapse" data-bs-parent="#accordionBlackjack">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Algoritmo para que la computadora decida cuándo pedir carta o plantarse</li>
+                                    <li>Estructura modular con funciones específicas para cada responsabilidad</li>
+                                    <li>Aplicación de buenas prácticas de JavaScript moderno</li>
+                                    <li>Diseño responsivo con Bootstrap y animaciones</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-    
-            <!-- Proyecto CRUD -->
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div id="carouselProyectoCRUD" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="assets/img/proyecto-NET.png" class="d-block w-100" alt="Proyecto CRUD - Imagen 1">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/img/proyecto-NET 2.png" class="d-block w-100" alt="Proyecto CRUD - Imagen 2">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/img/proyecto-NET 3.png" class="d-block w-100" alt="Proyecto CRUD - Imagen 3">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/img/proyecto-NET 4.png" class="d-block w-100" alt="Proyecto CRUD - Imagen 4">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/img/proyecto-NET 5.png" class="d-block w-100" alt="Proyecto CRUD - Imagen 5">
+            <div class="card-footer bg-transparent text-center">
+                <a href="https://jazzy-cendol-8bcf7a.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <i class="fas fa-external-link-alt me-2"></i>Ver Proyecto
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Proyecto CRUD -->
+    <div class="col-md-4">
+        <div class="card h-100 shadow project-card">
+            <div id="carouselProyectoCRUD" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselProyectoCRUD" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselProyectoCRUD" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselProyectoCRUD" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselProyectoCRUD" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselProyectoCRUD" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/img/proyecto-NET.png" class="d-block w-100" alt="CRUD - Imagen 1" loading="lazy">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/proyecto-NET 2.png" class="d-block w-100" alt="CRUD - Imagen 2" loading="lazy">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/proyecto-NET 3.png" class="d-block w-100" alt="CRUD - Imagen 3" loading="lazy">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/proyecto-NET 4.png" class="d-block w-100" alt="CRUD - Imagen 4" loading="lazy">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/proyecto-NET 5.png" class="d-block w-100" alt="CRUD - Imagen 5" loading="lazy">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyectoCRUD" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProyectoCRUD" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">
+                    <i class="fas fa-database me-2"></i>CRUD .NET MVC
+                </h5>
+                <p class="card-text">
+                    Aplicación web desarrollada en .NET 8 con MVC para gestión de contactos. Permite crear, visualizar, editar y eliminar registros, con arquitectura bien estructurada y conexión a SQL Server.
+                </p>
+                <div class="accordion accordion-flush" id="accordionCRUD">
+                    <div class="accordion-item">
+                        <h6 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDesafiosCRUD" aria-expanded="false" aria-controls="collapseDesafiosCRUD">
+                                Desafíos y Soluciones
+                            </button>
+                        </h6>
+                        <div id="collapseDesafiosCRUD" class="accordion-collapse collapse" data-bs-parent="#accordionCRUD">
+                            <div class="accordion-body">
+                                <h6>Desafíos:</h6>
+                                <ul>
+                                    <li>Configuración de Entity Framework Core con SQL Server</li>
+                                    <li>Diseño de interfaz intuitiva y responsiva</li>
+                                </ul>
+                                <h6>Soluciones:</h6>
+                                <ul>
+                                    <li>Implementación de migraciones para gestionar cambios en la base de datos</li>
+                                    <li>Uso de Bootstrap para diseño responsivo y mensajes de confirmación</li>
+                                </ul>
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyectoCRUD" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselProyectoCRUD" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        </button>
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title">CRUD .NET MVC</h5>
-                        <p class="card-text">
-                            CrudNet8MVC es una aplicación web desarrollada en .NET 8 con MVC, diseñada para la gestión de contactos. Permite crear, visualizar, editar y eliminar registros, con una arquitectura bien estructurada y conexión a SQL Server mediante Entity Framework Core. Su diseño modular y limpio garantiza un desarrollo escalable y eficiente. 🚀
-                        </p>
-                        <p class="card-text">
-                            <strong>Desafíos:</strong>
-                            <ul>
-                                <li>
-                                    <strong>Configuración de Entity Framework Core:</strong> Conectar la aplicación con SQL Server y configurar las migraciones para gestionar la base de datos.
-                                </li>
-                        
-                                <li>
-                                    <strong>Diseño de la interfaz de usuario:</strong> Crear una interfaz intuitiva y responsiva para que los usuarios puedan gestionar los contactos fácilmente.
-                                </li>
-                               
-                            </ul>
-                        </p>
-                        <p class="card-text">
-                            <strong>Soluciones:</strong>
-                            <ul>
-                                <li>
-                                    <strong>Entity Framework Core:</strong> Configuré Entity Framework Core para conectarme a SQL Server y usé migraciones para gestionar los cambios en la base de datos. Esto permitió una integración fluida entre la aplicación y la base de datos.
-                                </li>
-                             
-                                <li>
-                                    <strong>Interfaz de usuario:</strong> Usé Bootstrap para diseñar una interfaz responsiva y atractiva. Además, agregué mensajes de confirmación y error para mejorar la experiencia del usuario.
-                                </li>
-                        
-                            </ul>
-                        </p>
-                        <p class="card-text">
-                            <strong>Resultados:</strong>
-                            <ul>
-                                <li>La aplicación es funcional y permite gestionar contactos de manera eficiente.</li>
-                                <li>El código es modular y fácil de mantener, lo que permite agregar nuevas funcionalidades en el futuro.</li>
-                                <li>La interfaz es intuitiva y funciona bien en dispositivos móviles y de escritorio.</li>
-                                <li>La aplicación es segura y cumple con las mejores prácticas de desarrollo.</li>
-                            </ul>
-                        </p>
-                       
+                    <div class="accordion-item">
+                        <h6 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseResultadosCRUD" aria-expanded="false" aria-controls="collapseResultadosCRUD">
+                                Resultados
+                            </button>
+                        </h6>
+                        <div id="collapseResultadosCRUD" class="accordion-collapse collapse" data-bs-parent="#accordionCRUD">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Aplicación funcional y eficiente</li>
+                                    <li>Código modular y mantenible</li>
+                                    <li>Interfaz intuitiva para dispositivos móviles y escritorio</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    
+    </div>
+</div>
+</section>
 
-    <section id="skills" class="container py-5">
-        <h2 class="text-center mb-4">💻 Habilidades</h2>
-        <h3 class="text-center mb-4">Desarollo Web</h3>
-        <div class="row">
-            <div class="col-md-4 mb-3">
-                <p><i class="fab fa-html5"></i> <strong>HTML</strong></p>
-                <div class="progress">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: 90%;">85%</div>
+<!-- Skills Section -->
+<section id="skills" class="container py-5">
+    <h2 class="text-center section-heading">
+        <i class="fas fa-laptop-code me-2"></i>Mis Habilidades
+    </h2>
+    <hr class="divider">
+    
+    <div class="row mb-5">
+        <div class="col-lg-6 mx-auto">
+            <p class="lead text-center">Herramientas y tecnologías que domino en mi día a día como desarrollador</p>
+        </div>
+    </div>
+    
+    <!-- Tabs para categorías de habilidades -->
+    <ul class="nav nav-pills mb-4 justify-content-center" id="skillsTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="web-tab" data-bs-toggle="tab" data-bs-target="#web" type="button" role="tab" aria-controls="web" aria-selected="true">
+                <i class="fas fa-globe me-2"></i>Web
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="languages-tab" data-bs-toggle="tab" data-bs-target="#languages" type="button" role="tab" aria-controls="languages" aria-selected="false">
+                <i class="fas fa-code me-2"></i>Lenguajes
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="frameworks-tab" data-bs-toggle="tab" data-bs-target="#frameworks" type="button" role="tab" aria-controls="frameworks" aria-selected="false">
+                <i class="fas fa-cubes me-2"></i>Frameworks
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="databases-tab" data-bs-toggle="tab" data-bs-target="#databases" type="button" role="tab" aria-controls="databases" aria-selected="false">
+                <i class="fas fa-database me-2"></i>Bases de Datos
+            </button>
+        </li>
+    </ul>
+    
+    <div class="tab-content" id="skillsTabContent">
+        <!-- Web Development -->
+        <div class="tab-pane fade show active" id="web" role="tabpanel" aria-labelledby="web-tab">
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-3">
+                    <div class="card skill-card shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fab fa-html5 fa-2x text-danger me-3"></i>
+                                <h5 class="card-title mb-0">HTML</h5>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card skill-card shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fab fa-css3-alt fa-2x text-primary me-3"></i>
+                                <h5 class="card-title mb-0">CSS</h5>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-3">
-                <p><i class="fab fa-css3"></i> <strong>CSS</strong></p>
-                <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 65%;">75%</div>
-                </div>
-            </div>
-        <!-- Lenguajes de programación -->
-        <div class="mb-5">
-            <h3 class="text-center mb-3">Lenguajes de Programación</h3>
-            <div class="row">
+        </div>
+        
+        <!-- Lenguajes de Programación -->
+        <div class="tab-pane fade" id="languages" role="tabpanel" aria-labelledby="languages-tab">
+            <div class="row justify-content-center">
                 <div class="col-md-4 mb-3">
-                    <p><i class="fa fa-chevron-right"></i> <strong>C#</strong></p>
-                    <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;">90%</div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <p><i class="fab fa-js"></i> <strong>JavaScript</strong></p>
-                    <div class="progress">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 70%;">70%</div>
+                    <div class="card skill-card shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fab fa-microsoft fa-2x text-primary me-3"></i>
+                                <h5 class="card-title mb-0">C#</h5>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <p><i class="fab fa-python"></i> <strong>Python</strong></p>
-                    <div class="progress">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 90%;">90%</div>
+                    <div class="card skill-card shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fab fa-js fa-2x text-warning me-3"></i>
+                                <h5 class="card-title mb-0">JavaScript</h5>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <p><i class="fab fa-java"></i> <strong>Java</strong></p>
-                    <div class="progress">
-                        <div class="progress-bar bg-info" role="progressbar" style="width: 80%;">80%</div>
+                <div class="col-md-4 mb-3">
+                    <div class="card skill-card shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fab fa-python fa-2x text-info me-3"></i>
+                                <h5 class="card-title mb-0">Python</h5>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <p><i class="fab fa-c++"></i> <strong>C++</strong></p>
-                    <div class="progress">
-                        <div class="progress-bar bg-secondary" role="progressbar" style="width: 70%;">70%</div>
+                <div class="col-md-4 mb-3">
+                    <div class="card skill-card shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fab fa-java fa-2x text-danger me-3"></i>
+                                <h5 class="card-title mb-0">Java</h5>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card skill-card shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-code fa-2x text-secondary me-3"></i>
+                                <h5 class="card-title mb-0">C++</h5>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-secondary" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     
         <!-- Frameworks -->
-        <div class="mb-5">
-            <h3 class="text-center mb-3">Frameworks</h3>
-            <div class="row">
+        <div class="tab-pane fade" id="frameworks" role="tabpanel" aria-labelledby="frameworks-tab">
+            <div class="row justify-content-center">
                 <div class="col-md-4 mb-3">
-                    <p><i class="fas fa-code"></i> <strong>.NET</strong></p>
-                    <div class="progress">
-                        <div class="progress-bar bg-danger" role="progressbar" style="width: 70%;">70%</div>
+                    <div class="card skill-card shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fab fa-microsoft fa-2x text-danger me-3"></i>
+                                <h5 class="card-title mb-0">.NET</h5>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <p><i class="fab fa-bootstrap"></i> <strong>Bootstrap</strong></p>
-                    <div class="progress">
-                        <div class="progress-bar bg-info" role="progressbar" style="width: 80%;">80%</div>
+                    <div class="card skill-card shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fab fa-bootstrap fa-2x text-purple me-3"></i>
+                                <h5 class="card-title mb-0">Bootstrap</h5>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     
-        <!-- Bases de datos -->
-        <div class="mb-5">
-            <h3 class="text-center mb-3">Bases de Datos</h3>
-            <div class="row">
+        <!-- Bases de Datos -->
+        <div class="tab-pane fade" id="databases" role="tabpanel" aria-labelledby="databases-tab">
+            <div class="row justify-content-center">
                 <div class="col-md-4 mb-3">
-                    <p><i class="fas fa-database"></i> <strong>SQL Server</strong></p>
-                    <div class="progress">
-                        <div class="progress-bar bg-secondary" role="progressbar" style="width: 70%;">70%</div>
+                    <div class="card skill-card shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-database fa-2x text-primary me-3"></i>
+                                <h5 class="card-title mb-0">SQL Server</h5>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-secondary" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <p><i class="fas fa-database"></i> <strong>MySQL</strong></p>
-                    <div class="progress">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 70%;">60%</div>
+                    <div class="card skill-card shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-database fa-2x text-warning me-3"></i>
+                                <h5 class="card-title mb-0">MySQL</h5>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <p><i class="fas fa-database"></i> <strong>Oracle SQL</strong></p>
-                    <div class="progress">
-                        <div class="progress-bar bg-dark" role="progressbar" style="width: 70%;">65%</div>
+                    <div class="card skill-card shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-database fa-2x text-danger me-3"></i>
+                                <h5 class="card-title mb-0">Oracle SQL</h5>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-dark" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65%</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="certificates" class="container py-5">
-        <h2 class="text-center">Certificados</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card">
+<!-- Certificates Section -->
+<section id="certificates" class="container py-5">
+    <h2 class="text-center section-heading">
+        <i class="fas fa-certificate me-2"></i>Certificados
+    </h2>
+    <hr class="divider">
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100 shadow certificate-card">
+                <div class="card-img-container">
                     <img src="assets/img/python.jpg" class="card-img-top img-thumbnail"
-                         alt="Certificado Python" data-bs-toggle="modal" data-bs-target="#modalPython">
-                    <div class="card-body">
-                        <h5 class="card-title">Python con Udemy</h5>
-                        <p class="card-text">Domino la programación en Python, incluyendo fundamentos, 
-                            programación orientada a objetos (POO) y aplicaciones avanzadas.
-                            Puedo crear programas completos, trabajar con IA, Machine Learning, 
-                            Data Science, Web Scraping y más. Además, he desarrollado 
-                            múltiples proyectos prácticos que refuerzan mi experiencia. 🚀</p>
+                         alt="Certificado Python" data-bs-toggle="modal" data-bs-target="#modalPython" loading="lazy">
+                    <div class="certificate-overlay">
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalPython">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
                     </div>
                 </div>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <i class="fab fa-python me-2 text-primary"></i>Python con Udemy
+                    </h5>
+                    <p class="card-text">Dominio de programación en Python, incluyendo fundamentos, 
+                        programación orientada a objetos (POO) y aplicaciones avanzadas.
+                        Creación de programas completos, trabajo con IA, Machine Learning, 
+                        Data Science, Web Scraping y desarrollo de múltiples proyectos prácticos.</p>
+                </div>
+                <div class="card-footer bg-transparent text-center">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPython">
+                        <i class="fas fa-search-plus me-2"></i>Ver Certificado
+                    </button>
+                </div>
             </div>
-            <div class="col-md-6">
-                <div class="card">
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow certificate-card">
+                <div class="card-img-container">
                     <img src="assets/img/programacion para principiantes.jpg" class="card-img-top img-thumbnail"
-                         alt="Certificado Programación" data-bs-toggle="modal" data-bs-target="#modalProgramacion">
-                    <div class="card-body">
-                        <h5 class="card-title">Programación para principiantes</h5>
-                        <p class="card-text">Domino los fundamentos de la programación, incluyendo 
-                            JavaScript y TypeScript, estructuras de control, funciones, objetos y 
-                            módulos. Desarrollé lógica de programación, creé un juego web y aprendí 
-                            conceptos clave para iniciar en el desarrollo de aplicaciones. 🚀</p>
+                         alt="Certificado Programación" data-bs-toggle="modal" data-bs-target="#modalProgramacion" loading="lazy">
+                    <div class="certificate-overlay">
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalProgramacion">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
                     </div>
                 </div>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <i class="fas fa-code me-2 text-success"></i>Programación para principiantes
+                    </h5>
+                    <p class="card-text">Dominio de los fundamentos de programación, incluyendo 
+                        JavaScript y TypeScript, estructuras de control, funciones, objetos y 
+                        módulos. Desarrollo de lógica de programación, creación de juegos web y
+                        conceptos clave para iniciar en el desarrollo de aplicaciones.</p>
+                </div>
+                <div class="card-footer bg-transparent text-center">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProgramacion">
+                        <i class="fas fa-search-plus me-2"></i>Ver Certificado
+                    </button>
+                </div>
             </div>
-            <div class="col-md-6">
-                <div class="card">
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow certificate-card">
+                <div class="card-img-container">
                     <img src="assets/img/javascript para principiantes.jpg" class="card-img-top img-thumbnail"
-                         alt="Certificado JavaScript" data-bs-toggle="modal" data-bs-target="#modaljavascript">
-                    <div class="card-body">
-                        <h5 class="card-title">JavaScript en udemy</h5>
-                        <p class="card-text">En este curso de JavaScript moderno, aprendí desde los conceptos
-                            básicos hasta los más avanzados. Comencé con lo esencial, como los tipos de datos,
-                            operadores, ciclos y cómo manipular el DOM. Luego, profundicé en características
-                            más avanzadas como ESNext, clases, promesas, callbacks y funciones generadoras.
-                            También aprendí a usar herramientas como Node, Npm y Vite para gestionar mis proyectos. 
-                            </p>
+                         alt="Certificado JavaScript" data-bs-toggle="modal" data-bs-target="#modaljavascript" loading="lazy">
+                    <div class="certificate-overlay">
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modaljavascript">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
                     </div>
                 </div>
-        </div>
-    </section>
-    
-    <!-- Modal para Certificado Python -->
-    <div class="modal fade" id="modalPython" tabindex="-1" aria-labelledby="modalPythonLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-body text-center">
-                    <img src="assets/img/python.jpg" class="img-fluid" alt="Certificado Python">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <i class="fab fa-js me-2 text-warning"></i>JavaScript en Udemy
+                    </h5>
+                    <p class="card-text">Aprendizaje de JavaScript moderno, desde conceptos
+                        básicos hasta avanzados. Incluye tipos de datos, operadores, ciclos,
+                        manipulación del DOM, características de ESNext, clases, promesas,
+                        callbacks, funciones generadoras y uso de herramientas como Node, 
+                        Npm y Vite para gestión de proyectos.</p>
+                </div>
+                <div class="card-footer bg-transparent text-center">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modaljavascript">
+                        <i class="fas fa-search-plus me-2"></i>Ver Certificado
+                    </button>
                 </div>
             </div>
         </div>
     </div>
-    
-    <!-- Modal para Certificado Programación -->
-    <div class="modal fade" id="modalProgramacion" tabindex="-1" aria-labelledby="modalProgramacionLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-body text-center">
-                    <img src="assets/img/programacion para principiantes.jpg" class="img-fluid" alt="Certificado Programación">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="modaljavascript" tabindex="-1" aria-labelledby="modalProgramacionLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-body text-center">
-                    <img src="assets/img/javascript para principiantes.jpg" class="img-fluid" alt="Certificado Programación">
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <section id="contact" class="container py-5">
-        <h2 class="text-center">Contacto</h2>
-        <div class="card card-contacto">
-            <div class="card-body">
-                <h5 class="card-title">Francisco Alexander Chic Barrios</h5>
-                <p class="card-text">
-                    <strong>Correo:</strong> alexanderchicbarrios@gmail.com<br>
-                    <strong>Teléfono:</strong> +502 5495-7516
-                </p>
-            </div>
-            <img src="assets/img/yo.jpg" class="card-img" alt="Imagen de contacto de Alexander Chic">
-        </div>
-    </section>
-    
-    
-    
+</section>
 
-   
-    <footer class="text-center bg-dark text-white py-3">
+<!-- Modales para Certificados -->
+<div class="modal fade" id="modalPython" tabindex="-1" aria-labelledby="modalPythonLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalPythonLabel">Certificado de Python</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="assets/img/python.jpg" class="img-fluid" alt="Certificado Python">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <a href="assets/img/python.jpg" class="btn btn-primary" download>
+                    <i class="fas fa-download me-2"></i>Descargar
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalProgramacion" tabindex="-1" aria-labelledby="modalProgramacionLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalProgramacionLabel">Certificado de Programación</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="assets/img/programacion para principiantes.jpg" class="img-fluid" alt="Certificado Programación">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <a href="assets/img/programacion para principiantes.jpg" class="btn btn-primary" download>
+                    <i class="fas fa-download me-2"></i>Descargar
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modaljavascript" tabindex="-1" aria-labelledby="modalJavaScriptLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalJavaScriptLabel">Certificado de JavaScript</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="assets/img/javascript para principiantes.jpg" class="img-fluid" alt="Certificado JavaScript">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <a href="assets/img/javascript para principiantes.jpg" class="btn btn-primary" download>
+                    <i class="fas fa-download me-2"></i>Descargar
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Section -->
+<section id="contact" class="container py-5">
+    <h2 class="text-center section-heading">
+        <i class="fas fa-envelope me-2"></i>Contacto
+    </h2>
+    <hr class="divider">
+    
+    <div class="row justify-content-center mb-4">
+        <div class="col-lg-8 text-center">
+            <p class="lead">¿Tienes algún proyecto en mente? ¡Hablemos!</p>
+        </div>
+    </div>
+    
+    <div class="row justify-content-center">
+        <!-- Información de contacto -->
+        <div class="col-md-5 mb-4 mb-md-0">
+            <div class="card shadow h-100">
+                <div class="card-body">
+                    <h5 class="card-title text-center mb-4">
+                        <i class="fas fa-id-card me-2"></i>Información de Contacto
+                    </h5>
+                    <ul class="list-group list-group-flush contact-list">
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-envelope text-primary me-3"></i>
+                            <div>
+                                <h6 class="mb-0">Email</h6>
+                                <a href="mailto:alexanderchic147@gmail.com" class="text-decoration-none">alexanderchic147@gmail.com</a>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-phone text-primary me-3"></i>
+                            <div>
+                                <h6 class="mb-0">Teléfono</h6>
+                                <a href="tel:+50241792042" class="text-decoration-none">+502 4179-2042</a>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-map-marker-alt text-primary me-3"></i>
+                            <div>
+                                <h6 class="mb-0">Ubicación</h6>
+                                <p class="mb-0">Ciudad de Guatemala, Guatemala</p>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-clock text-primary me-3"></i>
+                            <div>
+                                <h6 class="mb-0">Disponibilidad</h6>
+                                <p class="mb-0">Lunes - Viernes: 8:00 AM - 6:00 PM</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-footer bg-transparent text-center">
+                    <div class="social-icons">
+                        <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark btn-sm me-2">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm me-2">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com/your-handle" target="_blank" rel="noopener noreferrer" class="btn btn-outline-info btn-sm me-2">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://wa.me/50241792042" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success btn-sm">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
         
-        <p>&copy; 2025 - Mi Portafolio</p>
-    </footer>
-    
-    
-    
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/script.js"></script>
+       <!-- Formulario de contacto -->
+<!-- Formulario de contacto -->
+<div class="col-md-7">
+    <div class="card shadow">
+        <div class="card-body">
+            <h5 class="card-title text-center mb-4">
+                <i class="fas fa-paper-plane me-2"></i>Envíame un mensaje
+            </h5>
+            <form name="contact" netlify>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Tu nombre" required>
+                            <label for="name">Nombre</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="tu@ejemplo.com" required>
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Asunto" required>
+                    <label for="subject">Asunto</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <textarea class="form-control" id="message" name="message" placeholder="Tu mensaje" style="height: 150px" required></textarea>
+                    <label for="message">Mensaje</label>
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane me-2"></i>Enviar Mensaje
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="py-4 text-white" style="background: linear-gradient(135deg, #222 0%, #111 100%);">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                <a href="#" class="text-white text-decoration-none">
+                    <i class="fas fa-code me-2"></i>Alexander Chic
+                </a>
+            </div>
+            <div class="col-md-4 text-center mb-3 mb-md-0">
+                <div class="footer-social">
+                    <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" class="text-white me-3">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" class="text-white me-3">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://twitter.com/your-handle" target="_blank" rel="noopener noreferrer" class="text-white me-3">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://wa.me/50241792042" target="_blank" rel="noopener noreferrer" class="text-white">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 text-center text-md-end">
+                <p class="mb-0">&copy; 2025 Francisco Alexander Chic. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Back to top button -->
+<button id="back-to-top-btn" class="btn btn-primary back-to-top" aria-label="Volver arriba">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Modal para el formulario de contacto exitoso -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title" id="successModalLabel">
+                    <i class="fas fa-check-circle me-2"></i>¡Mensaje Enviado!
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <i class="fas fa-paper-plane fa-3x text-success mb-3"></i>
+                <p>Tu mensaje ha sido enviado correctamente. Me pondré en contacto contigo lo antes posible.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript Dependencies -->
+<!-- Bootstrap JS Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Scripts personalizados -->
+<script src="assets/js/script.js"></script>
 </body>
 </html>

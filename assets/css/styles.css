@@ -1,12 +1,26 @@
 /* Variables de colores */
 :root {
+    /* Colores principales */
     --primary-color: #007bff;
     --secondary-color: #6c757d;
     --background-color: #f8f9fa;
     --text-color: #333;
+    
+    /* Modo oscuro */
     --dark-bg: #121212;
     --dark-text: #f8f9fa;
     --dark-card: #1c1c1c;
+    
+    /* Navbar */
+    --navbar-scrolled: rgba(33, 37, 41, 0.95);
+    --navbar-dark-scrolled: rgba(28, 28, 28, 0.95);
+    
+    /* Sombras */
+    --shadow-light: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --shadow-dark: 0 4px 8px rgba(255, 255, 255, 0.05);
+    
+    /* Transición global */
+    --transition-standard: all 0.3s ease;
 }
 
 /* Estilos base */
@@ -14,31 +28,69 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
-    transition: background 0.3s, color 0.3s;
+    transition: var(--transition-standard);
+    scroll-behavior: smooth;
 }
 
 /* Navbar */
 .navbar {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease; /* Agregar transición para el navbar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: var(--transition-standard);
+    padding: 15px 0;
 }
 
 .navbar-scrolled {
-    background-color: #333 !important; /* Cambia el color al hacer scroll */
+    padding: 8px 0;
+    background-color: var(--navbar-scrolled) !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Tarjetas de proyectos */
 .card {
     background-color: white;
-    color: black;
+    color: var(--text-color);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    box-shadow: var(--shadow-light);
+    transition: var(--transition-standard);
+    overflow: hidden;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Project Card Overlays */
+.project-card .position-relative {
+    overflow: hidden;
+}
+
+.project-overlay,
+.certificate-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-overlay {
+    background: rgba(0, 123, 255, 0.2);
+}
+
+.certificate-overlay {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.project-card:hover .project-overlay,
+.certificate-card:hover .certificate-overlay {
+    opacity: 1;
 }
 
 /* Footer */
@@ -53,17 +105,20 @@ footer {
 .dark-mode {
     background-color: var(--dark-bg);
     color: var(--dark-text);
-    transition: background 0.3s, color 0.3s;
 }
 
 .dark-mode .navbar {
-    background-color: var(--dark-card);
+    background-color: var(--dark-card) !important;
+}
+
+.dark-mode .navbar-scrolled {
+    background-color: var(--navbar-dark-scrolled) !important;
 }
 
 .dark-mode .card {
     background-color: var(--dark-card);
     color: var(--dark-text);
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow-dark);
 }
 
 .dark-mode .btn-primary {
@@ -75,26 +130,37 @@ footer {
     background-color: #138496;
 }
 
+/* Dark mode toggle button */
 #dark-mode-toggle {
     background-color: transparent;
-    border: 2px solid white;
+    border: 2px solid rgba(255, 255, 255, 0.8);
     color: white;
     padding: 5px 12px;
     border-radius: 8px;
-    transition: all 0.3s ease;
+    transition: var(--transition-standard);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #dark-mode-toggle:hover {
-    background-color: white;
-    color: black;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#dark-mode-toggle i {
+    margin-right: 5px;
 }
 
 /* Estilos para el carrusel */
-#carouselProyecto1 .carousel-item img {
+.carousel-item {
+    transition: transform 0.6s ease-in-out;
+}
+
+.carousel-item img {
     object-fit: cover;
     height: 240px;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 5px 5px 0 0;
 }
 
 /* Estilos para la tarjeta de contacto */
@@ -121,12 +187,212 @@ footer {
     padding: 10px;
 }
 
+/* Certificados */
+.certificate-card .card-img-container {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efectos de imagen */
 .card img.img-thumbnail {
     transition: transform 0.3s ease-in-out;
 }
 
-.card img.img-thumbnail:hover {
+.card:hover img.img-thumbnail {
     transform: scale(1.05);
+}
+
+/* Botón de volver arriba */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    z-index: 99;
+    transition: var(--transition-standard);
+    opacity: 0;
+    transform: translateY(20px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mejoras para los iconos de habilidades */
+.skill-card i {
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover i {
+    transform: rotate(10deg) scale(1.1);
+}
+
+/* Estilos para el botón de acordeón */
+.accordion-button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: var(--text-color);
+    background-color: rgba(248, 249, 250, 0.7);
+    border: none;
+    border-radius: 8px;
+    padding: 15px 20px;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    box-shadow: var(--shadow-light);
+    transition: var(--transition-standard);
+}
+
+.accordion-button:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* Mantener consistencia visual en estado colapsado y expandido */
+.accordion-button::after {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    content: "";
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Estilo para modo oscuro */
+.dark-mode .accordion-button {
+    color: var(--dark-text);
+    background-color: var(--dark-card);
+    box-shadow: var(--shadow-dark);
+}
+
+.dark-mode .accordion-button:hover {
+    background-color: rgba(23, 162, 184, 0.1);
+}
+
+.dark-mode .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23f8f9fa' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+}
+
+/* Eliminar efectos no deseados de Bootstrap */
+.accordion-button:not(.collapsed) {
+    color: inherit;
+    background-color: inherit;
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    border-color: transparent;
+    box-shadow: none;
+    outline: none;
+}
+
+/* Conservar la apariencia visual al hacer clic */
+.accordion-button.collapsed, 
+.accordion-button:not(.collapsed) {
+    padding: 15px 20px;
+    border-radius: 8px;
+}
+
+/* Estilos para la sección de contacto compatible con modo oscuro */
+
+/* Lista de contactos */
+.dark-mode .list-group-item {
+    background-color: var(--dark-card);
+    color: var(--dark-text);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Formulario en modo oscuro */
+.dark-mode .form-control,
+.dark-mode .form-floating > .form-control {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: var(--dark-text);
+}
+
+.dark-mode .form-floating > label {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.dark-mode .form-floating > .form-control:focus ~ label,
+.dark-mode .form-floating > .form-control:not(:placeholder-shown) ~ label {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.dark-mode .form-floating > .form-control:focus {
+    border-color: rgba(23, 162, 184, 0.5);
+    box-shadow: 0 0 0 0.25rem rgba(23, 162, 184, 0.25);
+}
+
+/* Botones de redes sociales */
+.dark-mode .btn-outline-dark {
+    color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+
+.dark-mode .btn-outline-dark:hover {
+    color: #121212;
+    background-color: #f8f9fa;
+}
+
+.dark-mode .btn-outline-primary {
+    color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.dark-mode .btn-outline-primary:hover {
+    color: #f8f9fa;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.dark-mode .btn-outline-info {
+    color: #89CFF0;
+    border-color: #89CFF0;
+}
+
+.dark-mode .btn-outline-info:hover {
+    color: #121212;
+    background-color: #89CFF0;
+    border-color: #89CFF0;
+}
+
+.dark-mode .social-icons a {
+    transition: var(--transition-standard);
+}
+
+.dark-mode .social-icons a:hover {
+    transform: translateY(-3px);
+}
+
+/* Sombras adaptadas al modo oscuro */
+.dark-mode .shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Divider en modo oscuro */
+.dark-mode .divider {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Texto y encabezados */
+.dark-mode .section-heading,
+.dark-mode .lead,
+.dark-mode .card-title {
+    color: var(--dark-text);
 }
 
 /* 🌍 Hacerlo responsive */
@@ -143,5 +409,10 @@ footer {
 
     .card-contacto .card-body {
         width: 100%;
+    }
+    
+    .navbar-scrolled {
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
