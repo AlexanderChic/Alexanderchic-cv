@@ -9,6 +9,10 @@
     <meta name="theme-color" content="#007bff">
     <title>Portfolio | Alexander Chic</title>
     <!-- Font Awesome para iconos -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+    <link rel="manifest" href="/assets/img/site.webmanifest">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- Google Fonts - Poppins -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
@@ -106,30 +110,69 @@
             <!-- Proyecto Ahorcados -->
             <div class="col-md-4">
                 <div class="card h-100 shadow project-card">
-                    <div class="position-relative">
-                        <img src="assets/img/proyectoAhorcados.png" class="card-img-top" alt="Proyecto Ahorcados" loading="lazy">
-                        <div class="project-overlay">
-                            <a href="https://hangingfabc.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
+                    <div id="carouselProyectoAhorcados" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/img/proyectoAhorcados.png" class="d-block w-100" alt="Ahorcados - Imagen 1" loading="lazy">
+                                <div class="project-overlay">
+                                    <a href="https://hangingfabc.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyectoAhorcados" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselProyectoAhorcados" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">
                             <i class="fas fa-gamepad me-2"></i>Ahorcados
                         </h5>
-                        <p class="card-text">Un juego clásico de ahorcados desarrollado con:</p>
-                        <ul>
-                            <li><strong>Tecnologías:</strong> HTML, CSS, JavaScript</li>
-                            <li><strong>Herramientas:</strong> Visual Studio Code, Git</li>
-                            <li><strong>Metodologías:</strong> Desarrollo ágil, pruebas manuales</li>
-                        </ul>
                         <p class="card-text">
-                            <strong>Desafío:</strong> Implementar la lógica de verificación de letras en la palabra oculta, asegurando sensibilidad a mayúsculas y evitando intentos repetidos.
+                            Un juego clásico de ahorcados donde debes adivinar la palabra oculta letra por letra antes de que se complete el dibujo.
                         </p>
-                        <p class="card-text">
-                            <strong>Solución:</strong> Uso de funciones en JavaScript para normalizar la entrada, verificar intentos previos y actualizar la interfaz.
-                        </p>
+                        <div class="accordion accordion-flush" id="accordionAhorcados">
+                            <div class="accordion-item">
+                                <h6 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDesafiosAhorcados" aria-expanded="false" aria-controls="collapseDesafiosAhorcados">
+                                        Desafíos
+                                    </button>
+                                </h6>
+                                <div id="collapseDesafiosAhorcados" class="accordion-collapse collapse" data-bs-parent="#accordionAhorcados">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li>Implementar la lógica de verificación de letras en la palabra oculta</li>
+                                            <li>Asegurar sensibilidad a mayúsculas y minúsculas</li>
+                                            <li>Evitar que se contabilicen intentos con letras repetidas</li>
+                                            <li>Crear interfaz visual atractiva e intuitiva</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h6 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolucionesAhorcados" aria-expanded="false" aria-controls="collapseSolucionesAhorcados">
+                                        Soluciones
+                                    </button>
+                                </h6>
+                                <div id="collapseSolucionesAhorcados" class="accordion-collapse collapse" data-bs-parent="#accordionAhorcados">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li>Uso de funciones en JavaScript para normalizar la entrada de usuario</li>
+                                            <li>Implementación de verificación de intentos previos para evitar duplicados</li>
+                                            <li>Estructura modular con responsabilidades bien definidas</li>
+                                            <li>Diseño responsivo con animaciones para mejor experiencia</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="card-footer bg-transparent text-center">
                         <a href="https://hangingfabc.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
@@ -146,12 +189,27 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="assets/img/proyecto blackjack 1.png" class="d-block w-100" alt="Blackjack - Imagen 1" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://jazzy-cendol-8bcf7a.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
                     </div>
                     <div class="carousel-item">
                         <img src="assets/img/proyecto blackjack 2.png" class="d-block w-100" alt="Blackjack - Imagen 2" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://jazzy-cendol-8bcf7a.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
                     </div>
                     <div class="carousel-item">
                         <img src="assets/img/proyecto blackjack 3.png" class="d-block w-100" alt="Blackjack - Imagen 3" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://jazzy-cendol-8bcf7a.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyecto1" data-bs-slide="prev">
@@ -229,18 +287,43 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="assets/img/proyecto-NET.png" class="d-block w-100" alt="CRUD - Imagen 1" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://github.com/AlexanderChic/crudMVCSQLServer" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
                     </div>
                     <div class="carousel-item">
                         <img src="assets/img/proyecto-NET 2.png" class="d-block w-100" alt="CRUD - Imagen 2" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://github.com/AlexanderChic/crudMVCSQLServer" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
                     </div>
                     <div class="carousel-item">
                         <img src="assets/img/proyecto-NET 3.png" class="d-block w-100" alt="CRUD - Imagen 3" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://github.com/AlexanderChic/crudMVCSQLServer" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
                     </div>
                     <div class="carousel-item">
                         <img src="assets/img/proyecto-NET 4.png" class="d-block w-100" alt="CRUD - Imagen 4" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://github.com/AlexanderChic/crudMVCSQLServer" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
                     </div>
                     <div class="carousel-item">
                         <img src="assets/img/proyecto-NET 5.png" class="d-block w-100" alt="CRUD - Imagen 5" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://github.com/AlexanderChic/crudMVCSQLServer" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyectoCRUD" data-bs-slide="prev">
@@ -294,10 +377,19 @@
                                     <li>Código modular y mantenible</li>
                                     <li>Interfaz intuitiva para dispositivos móviles y escritorio</li>
                                 </ul>
+                                
                             </div>
                         </div>
+                        
                     </div>
+                    
                 </div>
+                
+            </div>
+            <div class="card-footer bg-transparent text-center">
+                <a href="https://github.com/AlexanderChic/crudMVCSQLServer" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <i class="fas fa-external-link-alt me-2"></i>Ver Codigo
+                </a>
             </div>
         </div>
     </div>
@@ -313,7 +405,7 @@
     
     <div class="row mb-5">
         <div class="col-lg-6 mx-auto">
-            <p class="lead text-center">Herramientas y tecnologías que domino en mi día a día como desarrollador</p>
+            <p class="lead text-center">Herramientas y tecnologías</p>
         </div>
     </div>
     
@@ -686,7 +778,7 @@
     
     <div class="row justify-content-center mb-4">
         <div class="col-lg-8 text-center">
-            <p class="lead">¿Tienes algún proyecto en mente? ¡Hablemos!</p>
+            <p class="lead">¿Tienes algo en mente? ¡Hablemos!</p>
         </div>
     </div>
     
@@ -703,14 +795,14 @@
                             <i class="fas fa-envelope text-primary me-3"></i>
                             <div>
                                 <h6 class="mb-0">Email</h6>
-                                <a href="mailto:alexanderchic147@gmail.com" class="text-decoration-none">alexanderchic147@gmail.com</a>
+                                <a href="mailto:alexanderchicbarrios@gmail.com" class="text-decoration-none">alexanderchicbarrios@gmail.com</a>
                             </div>
                         </li>
                         <li class="list-group-item d-flex align-items-center">
                             <i class="fas fa-phone text-primary me-3"></i>
                             <div>
                                 <h6 class="mb-0">Teléfono</h6>
-                                <a href="tel:+50241792042" class="text-decoration-none">+502 4179-2042</a>
+                                <a href="tel:+50241792042" class="text-decoration-none">+502 5902-5388</a>
                             </div>
                         </li>
                         <li class="list-group-item d-flex align-items-center">
@@ -731,16 +823,14 @@
                 </div>
                 <div class="card-footer bg-transparent text-center">
                     <div class="social-icons">
-                        <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark btn-sm me-2">
+                        <a href="https://github.com/AlexanderChic" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark btn-sm me-2">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm me-2">
+                        <a href="https://www.linkedin.com/in/francisco-alexander-chic-barrios-4bb0651a5/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm me-2">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="https://twitter.com/your-handle" target="_blank" rel="noopener noreferrer" class="btn btn-outline-info btn-sm me-2">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://wa.me/50241792042" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success btn-sm">
+
+                        <a href="https://wa.me/50259025388" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success btn-sm">
                             <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
@@ -800,16 +890,13 @@
             </div>
             <div class="col-md-4 text-center mb-3 mb-md-0">
                 <div class="footer-social">
-                    <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" class="text-white me-3">
+                    <a href="https://github.com/AlexanderChic" target="_blank" rel="noopener noreferrer" class="text-white me-3">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" class="text-white me-3">
+                    <a href="https://www.linkedin.com/in/francisco-alexander-chic-barrios-4bb0651a5/" target="_blank" rel="noopener noreferrer" class="text-white me-3">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://twitter.com/your-handle" target="_blank" rel="noopener noreferrer" class="text-white me-3">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="https://wa.me/50241792042" target="_blank" rel="noopener noreferrer" class="text-white">
+                    <a href="https://wa.me/50259025388" target="_blank" rel="noopener noreferrer" class="text-white">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>

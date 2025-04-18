@@ -395,6 +395,35 @@ footer {
     color: var(--dark-text);
 }
 
+/* Fix for accordion content background in dark mode */
+.dark-mode .accordion-body {
+    background-color: var(--dark-card);
+    color: var(--dark-text);
+}
+
+.dark-mode .accordion-collapse {
+    background-color: var(--dark-card);
+}
+
+.dark-mode .accordion-item {
+    background-color: var(--dark-card);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .accordion-flush .accordion-item {
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+}
+
+.dark-mode .accordion-flush .accordion-item:first-child {
+    border-top: 0;
+}
+
+.dark-mode .accordion-flush .accordion-item:last-child {
+    border-bottom: 0;
+}
+
 /* 🌍 Hacerlo responsive */
 @media (max-width: 768px) {
     .card-contacto {
